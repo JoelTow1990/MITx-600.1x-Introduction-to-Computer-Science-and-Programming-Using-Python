@@ -1,0 +1,19 @@
+"""
+Assume s is a string of lower case characters.
+
+Write a program that prints the longest substring of s in which the letters occur in alphabetical order. For example, if 
+s = 'azcbobobegghakl', then your program should print
+
+Longest substring in alphabetical order is: beggh
+
+In the case of ties, print the first substring. For example, if s = 'abcbcd', then your program should print
+
+Longest substring in alphabetical order is: abc
+"""
+
+winner = ''
+for i in range(len(s)):
+    for j in range(1,len(s)+1):
+        if list(s[i:j])==sorted(list(s[i:j])) and len(s[i:j])>len(winner):
+            winner = s[i:j]
+print('Longest substring in alphabetical order is: ' + winner)
