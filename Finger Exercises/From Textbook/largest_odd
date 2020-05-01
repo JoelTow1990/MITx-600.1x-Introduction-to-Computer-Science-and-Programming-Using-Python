@@ -1,0 +1,18 @@
+"""
+This exercise is from the end of 2.2.
+
+Write a program that examines three variables - x, y, and z - and prints the largest odd number among them. If none of them are odd, 
+it should print a message to that effect.
+"""
+
+def largest_odd(x,y,z):
+    listvariables = [x,y,z]
+    oddvariables = []
+    for i in listvariables:
+        if i%2!=0:
+            oddvariables.append(i)
+    oddvariables.sort()
+    if oddvariables != []:
+        return oddvariables[-1]
+    else:
+        return 'None of the variables are odd!'
