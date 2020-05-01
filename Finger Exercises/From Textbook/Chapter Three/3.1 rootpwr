@@ -1,0 +1,16 @@
+"""
+Write a program that asks the user to enter an integer and prints two integers, root and pwr, such that 1<pwr<6 and root**pwr is equal 
+to the integer entered by the user. If no such pair of integers exists, it should print a message to that effect.
+"""
+
+def rootpwr():
+    n = int(input("Enter an integer, n: "))
+    Root = None
+    Power = None
+    for power in range(2,6):
+        for root in range(n):
+            if root**power==n:
+                Root = root
+                Power = power
+                return "Your integer equals "+str(Root)+" to the power of "+str(Power)
+    return "There is no pair of integers a and b such that 1<b<6 and a**b = n"
