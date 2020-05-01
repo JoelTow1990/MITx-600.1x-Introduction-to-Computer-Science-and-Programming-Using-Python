@@ -1,0 +1,22 @@
+"""
+Write a program that asks the user to input 10 integers, and then prints the largest odd number that was entered. If no odd number was
+enterred, it should print a message to that effect.
+"""
+
+def largest_odd2():
+    count = 10
+    intlist = []
+    print("Enter ten integers, one by one")
+    while count > 0:
+        x = input('Enter an integer: ')
+        intlist.append(int(x))
+        count -= 1
+    odds = []
+    for i in intlist:
+        if int(i)%2!=0:
+            odds.append(i)
+    odds.sort()
+    if odds!=[]:
+        return odds[-1]
+    else:
+        return 'None of the integers are odd!'
