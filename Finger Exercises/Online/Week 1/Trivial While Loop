@@ -1,0 +1,17 @@
+"""
+1. Convert the following into code that uses a while loop.
+
+print 2
+prints 4
+prints 6
+prints 8
+prints 10
+prints Goodbye!
+"""
+
+n=2
+while n<11:
+    print(n)
+    n=n+2
+if n>11:
+    print("Goodbye!")
