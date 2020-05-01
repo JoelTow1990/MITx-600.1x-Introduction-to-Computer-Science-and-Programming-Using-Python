@@ -1,0 +1,18 @@
+"""
+Let s be a string that contains a sequence of decimal numbers separated by commas, e.g., s = '1.23,2.4,3.123'. 
+Write a program that prints the sum of the numbers in s.
+"""
+
+def return_sum(s):
+    # Assumes s is a string containing a sequence of numbers
+    if ',' in s:
+        tosum = [float(i) for i in s.split(',')]
+    elif ' ' in s:
+        tosum = [float(i) for i in s.split(' ')]
+    else:
+        tosum = [float(i) for i in s.split()]
+    answer = 0
+    for i in tosum:
+        answer += i
+    return answer
+    # Returns the sum of the numbers in s
