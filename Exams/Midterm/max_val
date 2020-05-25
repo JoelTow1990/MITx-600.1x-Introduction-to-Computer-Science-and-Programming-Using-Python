@@ -1,0 +1,32 @@
+"""
+Implement a function that meets the specifications below.
+
+def max_val(t): 
+    """ t, tuple or list
+        Each element of t is either an int, a tuple, or a list
+        No tuple or list is empty
+        Returns the maximum int in t or (recursively) in an element of t """ 
+    # Your code here
+For example,
+
+max_val((5, (1,2), [[1],[2]])) returns 5.
+max_val((5, (1,2), [[1],[9]])) returns 9.
+"""
+
+# IMPORTANT NOTE: Unlike my other solutions to problems in this exam, this function did not pass all of the tests. Need to work on this
+# function so that it works properly. Will remove this note once function has been fixed.
+
+def max_val(t): 
+    """ t, tuple or list
+        Each element of t is either an int, a tuple, or a list
+        No tuple or list is empty
+        Returns the maximum int in t or (recursively) in an element of t """ 
+    L = []
+    if type(t)==int:
+        L.append(t)
+        for i in L:
+            if type(i)==int:
+                return i
+    else:
+        for i in t:
+            return max_val(i)
